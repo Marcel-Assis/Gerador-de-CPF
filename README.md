@@ -31,7 +31,7 @@ Retorna algo assim:
 O código principal está assim:
 
 ```
-app.py
+Gerador_de_CPF.py
 ```
 
 Ele contém:
