@@ -1,64 +1,62 @@
-# Gerador de CPF (API em Flask)
+# Gerador de CPF (API)
 
-Este projeto é uma API simples feita com **Python e Flask** que gera um CPF válido usando o cálculo dos dígitos verificadores.  
-A ideia é ter uma rota que retorna um CPF aleatório sempre que for acessada.
+Um projeto simples em Python usando Flask para gerar CPFs válidos de forma aleatória através de uma API.
+O objetivo é treinar lógica, expressões regulares e desenvolvimento de API.
 
 ---
 
 ## Como funciona
 
-- Gera os 9 primeiros dígitos de forma aleatória  
-- Evita sequências repetidas (ex: 000000000)  
-- Calcula o 1º e o 2º dígito verificador  
-- Retorna o CPF completo em JSON
+A API possui um único endpoint:
+
+GET /cpf
+
+Ele retorna um CPF válido em formato JSON, exemplo:
+
+"58301924780"
+
+O algoritmo calcula corretamente os dois dígitos verificadores seguindo as regras oficiais.
 
 ---
 
-## Rota disponível
+## Estrutura do Projeto
 
-### `GET /cpf`
-
-Retorna algo assim:
-
-```json
-"12345678909"
-```
+/
+├── Gerador_de_CPF.py       # Arquivo principal com Flask e gerador de CPF
+├── requirements.txt        # Dependências do projeto
+├── README.md               # Este arquivo
+└── venv/                   # Ambiente virtual (não deve ser enviado para o GitHub)
 
 ---
 
-## Estrutura do arquivo
+## Dependências
 
-O código principal está assim:
+Conteúdo do requirements.txt:
 
-```
-Gerador_de_CPF.py
-```
-
-Ele contém:
-- A função que gera o CPF
-- A validação
-- A rota `/cpf`
-- A inicialização do Flask
+flask
+gunicorn
 
 ---
 
-## Como rodar
+## Rodando localmente
 
-Basta executar:
+Para testar o projeto localmente:
 
-```bash
 python Gerador_de_CPF.py
-```
 
 A API ficará disponível em:
 
-```
 http://127.0.0.1:5000/cpf
-```
 
 ---
 
-## Observação
+## Sobre a API
 
-Este projeto é simples e foi feito apenas para estudo e prática com Python, lógica e Flask.
+Quando acessado, o endpoint retorna um CPF totalmente válido.  
+O algoritmo funciona assim:
 
+1. Gera 9 dígitos aleatórios.
+2. Evita sequências repetidas (ex.: 111111111).
+3. Calcula o primeiro dígito verificador.
+4. Calcula o segundo dígito verificador.
+5. Retorna o CPF final (11 dígitos).
