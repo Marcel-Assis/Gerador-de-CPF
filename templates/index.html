@@ -52,7 +52,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>🇧🇷 Gerador de CPF Válido</h1>
+        <h1>Gerador de CPF Válido 🇧🇷</h1>
         <div id="cpf-display">Clique para Gerar</div>
         <button onclick="gerarCPF()">Gerar Novo CPF</button>
         <p style="margin-top: 20px; color: #777;">Dados gerados e validados por API Flask</p>
@@ -66,7 +66,7 @@
 
         async function gerarCPF() {
             try {
-                // Chama o endpoint da sua API
+                // Chama o endpoint da API
                 const response = await fetch('/cpf');
                 const cpfString = await response.json(); // O resultado é uma string JSON
                 
