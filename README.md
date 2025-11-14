@@ -45,6 +45,9 @@ http://127.0.0.1:5000/cpf
 Este projeto foi pensado também para ser exposto publicamente como um pequeno serviço backend.
 Ao disponibilizar a API online, qualquer pessoa pode fazer requisições ao endpoint `/cpf` e receber um CPF válido como resposta, facilitando testes, estudos ou integrações simples.
 
+Ele também foi hospedado com a ajuda do Render através do plano gratuito:
+https://gerador-de-cpf.onrender.com/
+
 ---
 
 ## Detalhes da lógica
