@@ -1,8 +1,7 @@
 import re
 import random
-from flask import Flask, jsonify, render_template # Adicione render_template aqui
+from flask import Flask, jsonify, render_template
 
-# ... (Sua função gerar_cpf_valido() permanece a mesma) ...
 
 def gerar_cpf_valido():
     """Gera um CPF válido aleatório."""
