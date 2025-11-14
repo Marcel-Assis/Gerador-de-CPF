@@ -30,9 +30,22 @@ gunicorn
 
 ## Rodando localmente
 
-Para testar localmente antes de expor a API:
+Para testar o projeto localmente, siga estes passos:
 
-python Gerador_de_CPF.py
+1. Criar o ambiente virtual:
+   python -m venv venv
+
+2. Ativar o ambiente virtual:
+   - Windows:
+     venv\Scripts\activate
+   - Linux/Mac:
+     source venv/bin/activate
+
+3. Instalar as dependências:
+   pip install -r requirements.txt
+
+4. Rodar o projeto:
+   python Gerador_de_CPF.py
 
 A API ficará disponível em:
 
