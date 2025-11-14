@@ -19,15 +19,6 @@ O algoritmo calcula corretamente os dois dígitos verificadores seguindo as regr
 
 ---
 
-## Estrutura do Projeto
-
-/
-├── Gerador_de_CPF.py       # Arquivo principal com Flask e gerador de CPF
-├── requirements.txt        # Dependências do projeto
-├── README.md               # Este arquivo
-└── venv/                   # Ambiente virtual (não deve ser enviado para o GitHub)
-
----
 
 ## Dependências
 
