@@ -1,6 +1,8 @@
 import re
 import random
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template # Adicione render_template aqui
+
+# ... (Sua função gerar_cpf_valido() permanece a mesma) ...
 
 def gerar_cpf_valido():
     """Gera um CPF válido aleatório."""
@@ -40,13 +42,18 @@ def gerar_cpf_valido():
 
     return f'{cpf_numeros}{digito_1}{digito_2}'
 
-# --- API ---
+# --- API e Frontend ---
 
 app = Flask(__name__)
 
+# NOVA ROTA: Serve o Frontend na raiz (/)
+@app.route("/")
+def index():
+    return render_template('index.html')
+
 @app.route("/cpf", methods=['GET'])
 def cpf_endpoint():
-    # Retorna o CPF gerado no formato JSON
+    # Rota da API que retorna o CPF em formato JSON
     return jsonify(gerar_cpf_valido())
 
 # Para rodar localmente
