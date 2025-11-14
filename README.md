@@ -47,7 +47,7 @@ Ele contém:
 Basta executar:
 
 ```bash
-python app.py
+python Gerador_de_CPF.py
 ```
 
 A API ficará disponível em:
