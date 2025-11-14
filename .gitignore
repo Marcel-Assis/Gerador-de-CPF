@@ -1,5 +1,5 @@
 # Ignorar a pasta do ambiente virtual
-.venv/
+venv/
 
 # Ignorar arquivos temporários e de cache
 __pycache__/
