@@ -4,51 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de CPF Online</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #f4f4f9;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        #cpf-display {
-            font-size: 2.5em;
-            margin: 20px 0;
-            padding: 10px 20px;
-            border: 2px solid #5cb85c;
-            border-radius: 4px;
-            background-color: #dff0d8;
-            color: #3c763d;
-            font-weight: bold;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
@@ -58,29 +14,6 @@
         <p style="margin-top: 20px; color: #777;">Dados gerados e validados por API Flask</p>
     </div>
 
-    <script>
-        function formatarCPF(cpf) {
-            // Formata o CPF como XXX.XXX.XXX-XX
-            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-        }
-
-        async function gerarCPF() {
-            try {
-                // Chama o endpoint da API
-                const response = await fetch('/cpf');
-                const cpfString = await response.json(); // O resultado é uma string JSON
-                
-                const cpfFormatado = formatarCPF(cpfString);
-                
-                document.getElementById('cpf-display').textContent = cpfFormatado;
-            } catch (error) {
-                console.error('Erro ao buscar CPF:', error);
-                document.getElementById('cpf-display').textContent = 'Erro ao carregar';
-            }
-        }
-        
-        // Gera um CPF na primeira carga da página
-        gerarCPF(); 
-    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
