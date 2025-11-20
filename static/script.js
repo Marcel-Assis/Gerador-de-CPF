@@ -5,7 +5,7 @@ function formatarCPF(cpf) {
 
 async function gerarCPF() {
     try {
-        // Chama o endpoint da API
+        // Chama o endpoint da API.
         const response = await fetch('/cpf');
         const cpfString = await response.json(); // O resultado é uma string JSON
         
